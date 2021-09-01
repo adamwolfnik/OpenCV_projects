@@ -54,6 +54,7 @@ while True:
     if len(mypoints)!=0:
         for point in mypoints:
             draw_on_canvas(point,mycolorvalues)
+    cv2.putText(result," Nikhil ",(320,128),cv2.FONT_HERSHEY_SCRIPT_SIMPLEX,2,(200,180,200),2)
     cv2.imshow("Result", result)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
