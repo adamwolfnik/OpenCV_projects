@@ -50,9 +50,8 @@ while True:
   out=img.copy()
   alpha=0.1
   mask=imgNew.astype(bool)
-  cv2.putText(imgNew," Nikhil ",(320,128),cv2.FONT_HERSHEY_SCRIPT_SIMPLEX,2,(200,180,200),2)
   out[mask]=cv2.addWeighted(img, alpha, imgNew,1-alpha, 0)[mask]
-
+  cv2.putText(out," Nikhil ",(800,400),cv2.FONT_HERSHEY_SCRIPT_SIMPLEX,2,(200,180,200),2)
   cv2.imshow("Image",out)
   cv2.waitKey(1)
   if cv2.waitKey(1) & 0xFF == ord('q'):
